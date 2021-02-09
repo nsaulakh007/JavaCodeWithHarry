@@ -5,7 +5,11 @@ class Car{
     }
 }
 class SportsCar extends Car{
+    void change(){
+        super.changeGear();
+    }
     void changeGear(){
+
         System.out.println("SportsCar class method call");
     }
 }
@@ -15,6 +19,7 @@ public class Methodverriding extends SportsCar {
         Car g1 = new Car();
         SportsCar g2 = new SportsCar();
         g1.changeGear();
+        g2.change();
         g2.changeGear();
     }
 }
